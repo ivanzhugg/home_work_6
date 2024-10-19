@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="calc.js"></script>
+		<title>Home work 5</title>
+	</head>
+	<body>
+		<form>
+			<label id="result">1212</label>
+			<br />
+
+			<label for="good">Товар:</label>
+			<select id="good" name="good" required>
+				<option value="1000">телефон</option>
+				<option value="250">банан</option>
+				<option value="2000000">лампа</option>
+				<option value="100">человек</option>
+			</select>
+
+			<br />
+
+			<label for="amount">Количество товара:</label>
+			<input
+				id="amount"
+				name="amount"
+				min="1"
+				value="1"
+				placeholder="Введите количество необходимого товара"
+				required
+				type="number"
+			/>
+
+			<button id="button" type="submit">Рассчитать стоимость</button>
+		</form>
+	</body>
+</html>
