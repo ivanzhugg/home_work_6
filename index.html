@@ -2,36 +2,46 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<script src="calc.js"></script>
-		<title>Home work 5</title>
+		<title>Home work 6</title>
 	</head>
 	<body>
-		<form>
-			<label id="result">1212</label>
+		<form id="form">
+			<label id="result"></label>
 			<br />
-
-			<label for="good">Товар:</label>
-			<select id="good" name="good" required>
-				<option value="1000">телефон</option>
-				<option value="250">банан</option>
-				<option value="2000000">лампа</option>
-				<option value="100">человек</option>
-			</select>
-
-			<br />
-
 			<label for="amount">Количество товара:</label>
 			<input
 				id="amount"
 				name="amount"
 				min="1"
 				value="1"
-				placeholder="Введите количество необходимого товара"
+				placeholder="Введите количество товара"
 				required
 				type="number"
 			/>
-
-			<button id="button" type="submit">Рассчитать стоимость</button>
+			<br />
+			<label>Тип услуги</label>
+			<div id="radios">
+				<label
+					><input
+						type="radio"
+						name="prodOptions"
+						value="item_1"
+					/>Отопление</label
+				>
+				<label
+					><input
+						type="radio"
+						name="prodOptions"
+						value="item_2"
+					/>Интернет</label
+				>
+				<label
+					><input type="radio" name="prodOptions" value="item_3" />Доставка
+					еды</label
+				>
+			</div>
 		</form>
 	</body>
+
+	<script src="main.js"></script>
 </html>
