@@ -1,6 +1,19 @@
 function updatePrice() {
 	let price = 0
-	let prices = getPrices()
+	let prices = {
+		prodOptions: {
+			item_1: 700,
+			item_2: 150,
+			item_3: 500,
+		},
+		prodProperties: {
+			prop1: 300,
+			prop2: 450,
+			prop3: 600,
+		},
+		prodTypes: [0, 200, 75, 3000],
+	}
+
 	let radios = document.getElementsByName('prodOptions')
 
 	radios.forEach(function (radio) {
@@ -38,29 +51,10 @@ function updatePrice() {
 	}
 
 	let amount = document.getElementById('amount').value
-	if (amount.match(/^[1-9]\d*$/) === null) {
-		alert('Введите целое число больше нуля')
-		return
-	}
+
 
 	let res = document.getElementById('result')
-	res.innerHTML = price * amount + 'рублей'
-}
-
-function getPrices() {
-	return {
-		prodOptions: {
-			item_1: 800,
-			item_2: 150,
-			item_3: 15000,
-		},
-		prodProperties: {
-			prop1: 5000,
-			prop2: 2500,
-			prop3: 1000,
-		},
-		prodTypes: [0, 200, 75, 3000],
-	}
+	res.innerHTML = price * amount + ' рублей'
 }
 
 function insertCheck() {
